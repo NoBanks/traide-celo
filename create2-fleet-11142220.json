@@ -1,0 +1,20 @@
+{
+ "chainId": 11142220,
+ "method": "CREATE2 via canonical proxy",
+ "saltsVersion": "V1",
+ "timestamp": "2026-08-14T22:45:11.861Z",
+ "deployer": "0xcEDdA90b60748e04Ff9C4123c5f49544611748e5",
+ "contracts": {
+  "token": "0x341936d89E1182c52440351B7AA1070001CEeb99",
+  "amm": "0x4b6781AfC7e91D65acdD37a424D7A43f170f9120",
+  "staking": "0x61ebb11021aF722e5B88412e89C8943cC774A7Dd",
+  "factory": "0xC1b443bDD37128ceB15e9b6F2c4DD3284e92259f",
+  "router": "0xc5628f0B3aDcD0F08158B7798600e974E9E8C506",
+  "governance": "0x0bA8977C22EB07d8CdFbC87D7bB5c988578e0D7F",
+  "timelock": "0x675eb11A7C49fE2d03a9B6eEE7aCeb6b50a03611",
+  "oracle": "0xDe730c24018C0bdb7d821B331Cdc6C444041199f",
+  "feeDistribution": "0xCCE43DEf5912e53ab17dA22C7805fe5698216dc3",
+  "multicall": "0x1B210947E967E69bB480053F0cD2b7E1bb2A4024",
+  "bridge": "0xe6F21B958592E3C4F35a1c5a654a4f626c13e3f7"
+ }
+}

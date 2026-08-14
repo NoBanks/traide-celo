@@ -1,0 +1,21 @@
+{
+  "version": "V1",
+  "created": "2026-08-06",
+  "proxy": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+  "note": "Canonical CREATE2 salts for the TRAIDE fleet. Address = keccak256(0xff ++ proxy ++ keccak256(saltString) ++ keccak256(initCode))[12:]. Constructor args are part of initCode: 10 of 11 contracts use constant or deterministic args and are CHAIN-INVARIANT; TRAIDERouter takes the chain's native wrapped token so its address is CHAIN-DEPENDENT BY DESIGN. Deployer wallet 0xcEDdA90b60748e04Ff9C4123c5f49544611748e5 appears as a constructor arg (feeToSetter/treasury/timelock admin) and must remain the fleet wallet for address invariance.",
+  "salts": {
+    "token": "TRAIDE_TOKEN_V1",
+    "amm": "TRAIDE_AMM_V1",
+    "staking": "TRAIDE_STAKING_V1",
+    "factory": "TRAIDE_FACTORY_V1",
+    "router": "TRAIDE_ROUTER_V1",
+    "governance": "TRAIDE_GOVERNANCE_V1",
+    "timelock": "TRAIDE_TIMELOCK_V1",
+    "oracle": "TRAIDE_ORACLE_V1",
+    "feeDistribution": "TRAIDE_FEEDIST_V1",
+    "multicall": "TRAIDE_MULTICALL_CREATE2_V1",
+    "bridge": "TRAIDE_BRIDGE_V1"
+  },
+  "chainInvariant": ["token", "amm", "staking", "factory", "governance", "timelock", "oracle", "feeDistribution", "multicall", "bridge"],
+  "chainDependent": {"router": "constructor takes the chain's wrapped-native token address (WETH/WGBTC/etc)"}
+}

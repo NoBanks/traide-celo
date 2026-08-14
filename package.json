@@ -1,0 +1,20 @@
+{
+  "name": "traide-celo",
+  "version": "1.0.0",
+  "description": "TRAIDE DEX fleet on Celo: 11 contracts, deterministic CREATE2 addresses, Blockscout-verified",
+  "license": "MIT",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy:sepolia": "hardhat run create2-deploy-fleet.js --network celoSepolia",
+    "deploy:mainnet": "hardhat run create2-deploy-fleet.js --network celoMainnet",
+    "verify:sepolia": "node verify-fleet-blockscout.js 11142220",
+    "verify:mainnet": "node verify-fleet-blockscout.js 42220"
+  },
+  "devDependencies": {
+    "@chainlink/contracts": "1.4.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "5.4.0",
+    "dotenv": "^17.0.0",
+    "hardhat": "^2.28.0"
+  }
+}
