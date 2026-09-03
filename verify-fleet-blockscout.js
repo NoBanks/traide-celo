@@ -5,12 +5,13 @@
 // with THIS repo's lean ~50-source build-info verifies in ~30s per contract.
 // The main TRAIDE monorepo's 245-source build-info chokes their compiler queue,
 // so always verify FROM THIS REPO after `npx hardhat compile`.
-// Run: node verify-fleet-blockscout.js <chainId>   (11142220 rehearsal, 42220 mainnet)
+// Run: node verify-fleet-blockscout.js <chainId>   (11142220 Celo Sepolia, 42220 Celo mainnet, 46630 Robinhood testnet)
 const fs = require("fs");
 
 const CHAIN = Number(process.argv[2] || "11142220");
 const BASE = {
   11142220: "https://celo-sepolia.blockscout.com",
+  46630: "https://explorer.testnet.chain.robinhood.com", // Robinhood Chain Testnet (Blockscout), fleet deployed 2026-09-03
   42220: "https://celo.blockscout.com",
 }[CHAIN];
 if (!BASE) { console.error("no explorer for chain", CHAIN); process.exit(1); }
